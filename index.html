@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.09.2023 Deliverables</title>
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .inputArea {
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 8px;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .resultsBox {
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+<body>
+    <div class="container container2">
+        <h2>Print Even Numbers</h2>
+        <div class="inputArea">
+            <input type="number" id="printEvenNumber" name="printEvenNumberInput">
+            <button onclick="printEven()">click</button>
+            </div>
+            <p class="resultsBox" id="printEvenResult">Result will be shown here</p>
+        </div>
+    </div>
+
+    <script>
+        function printEven() {
+            const inputNumber = parseInt(document.getElementById('printEvenNumber').value);
+
+            let evenNumbers = [];
+            for (let i = 2; i <= inputNumber; i += 2) {
+                evenNumbers.push(i);
+            }
+
+            document.getElementById('printEvenResult').textContent = `Even Numbers: ${evenNumbers.join(', ')}`;
+        }
+    </script>
+</body>
+</html>
